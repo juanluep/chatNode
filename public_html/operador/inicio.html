@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Panel de control del operador</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="css/operador.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/sb-admin.css" rel="stylesheet" type="text/css"/>
+        <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <!--Barra superior-->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Cambaiar navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Panel de control Hermes</a>
+            </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <!-- Usuario -->
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>                        
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> Perfil de usuario</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuracion</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- /Usuario -->
+                </ul>
+            </nav>
+            <!--/Barra superior-->
+            
+            <!--Barra Lateral-->
+            
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Buscar...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-comments fa-fw"></i> Chat</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--/Barra Lateral-->
+            <!-- Pagina -->
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header"><i class="fa fa-comments fa-fx"></i> Chat</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <!-- panel de clientes en espera -->
+                         <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-group fa-fw"></i> Clientes en espera 
+                            <span id="ultimaActualizacionListaClientes" class="pull-right" >Ultima Actualización 00:00</span>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="list-group" id="usuarioConectados">
+                                                                
+                            </div>
+                            <!-- /.list-group -->
+                            <a href="#" class="btn btn-default btn-block" id="bPedirListaUsuarios"><i class="fa fa-refresh fa-fw"></i> Recargar</a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    </div>
+                    <div class="col-lg-8">                        
+                        <div class="chat-panel panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-comments fa-fw"></i>
+                            Chat   <span id="conUsuario"></span>
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu slidedown">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-refresh fa-fw"></i> Refrescar
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="bBorrar">
+                                            <i class="fa fa-eraser fa-fw"></i> Borrar
+                                        </a>
+                                    </li>    
+                                    <li>
+                                        <a href="#" id="bActivaNotifica">
+                                            <i class="fa fa-bolt fa-fw"></i> Activas notificaciones
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-minus fa-fw"></i> Cerrar
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <ul class="chat" id="muestraMensaje">
+                                
+                            </ul>
+                        </div>
+                        <!-- /.panel-body -->
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="mensaje" type="text" class="form-control input-sm" placeholder="Encribir mensaje" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning btn-sm" id="bEnviar">
+                                        Enviar
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /.panel-footer -->
+                    </div> 
+                    </div>
+                </div>
+            </div>
+            <!-- /Pagina -->
+        </div>
+        <script type="text/javascript" src="http://www.grupoitalica.com:2903/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="js/libs/jquery-1.9.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/operador.js"></script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Panel de control del operador</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width">    
+        
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/jquerymobile.css" rel="stylesheet" type="text/css" />
+        <link href="css/jquerymobile.nativedroid.css" rel="stylesheet" type="text/css" />
+        <link href="css/jquerymobile.nativedroid.light.css" rel="stylesheet" type="text/css"/>
+        <link href="css/jquerymobile.nativedroid.color.purple.css" rel="stylesheet" type="text/css"/>
+        <link href="css/clienteChat.css" rel="stylesheet" type="text/css"/>
+        
+    </head>
+    <body>
+        
+        <div data-role="page" id="contacta" data-theme="b">
+            <div data-role="header" data-position=fixed  data-tap-toggle="false" data-theme='b'>                
+                <h2><i class='icon-reorder'></i>  Antención al cliente</h2>
+            </div>
+            <div data-role="content">
+                <div id="muestraMensaje">
+                    
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div class="ui-grid-a enviador">
+                    <div class="ui-block-a">
+                        <input type="text" name="textoMesaje" id="textoMesaje" value="" data-clear-btn="true" placeholder="Escribe aqui...">
+                    </div>
+                    <div class="ui-block-b"><div id="botonEnviar">Enviar</div></div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="http://www.grupoitalica.com:2903/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="js/libs/jquery-1.9.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.mobile-1.3.1.min.js"></script>
+        <script type="text/javascript" src="js/cliente.js"></script>
+        
+    </body>
+</html>

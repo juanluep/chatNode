@@ -1,0 +1,54 @@
+/* 
+    Document   : clienteChat
+    Created on : 21-ene-2014, 19:12:21
+    Author     : juanlu
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+#muestraMensaje{
+    width: 95%;
+    height: 95%;
+    min-height: 100px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.enviador .ui-block-b {
+    width: 5%;
+    text-align: right;
+}
+.enviador .ui-block-a {
+    width: 95%;
+    text-align: center;
+}
+
+.enviador .ui-block-a div{
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#botonEnviar {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.mRecibido{
+    width: 100%;
+    text-align: left;
+    color: #690;        
+}
+
+.mEnviados{
+    width: 100%;
+    text-align: right;
+    color: brown;   
+}
